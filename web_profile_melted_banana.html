@@ -1,0 +1,1170 @@
+<!doctype html>
+<html lang="id" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MELTED BANANA - Kripik Pisang Coklat Lumer</title>
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Google Fonts: Playfair Display & Plus Jakarta Sans -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,800;1,400&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- FontAwesome Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              cacao: {
+                900: "#140c09",
+                800: "#23150e",
+                700: "#381f13",
+                600: "#522f1c",
+                500: "#734428",
+              },
+              banana: {
+                100: "#fef7da",
+                300: "#fce48b",
+                400: "#fbd451",
+                500: "#f4be38",
+                600: "#d99d1e",
+              },
+              craft: {
+                light: "#f7f3ec",
+                base: "#ebe3d5",
+                accent: "#d8cbb7",
+                dark: "#8c735d",
+              },
+            },
+            fontFamily: {
+              serif: ["Playfair Display", "serif"],
+              sans: ["Plus Jakarta Sans", "sans-serif"],
+            },
+          },
+        },
+      };
+    </script>
+
+    <style>
+      body {
+        font-family: "Plus Jakarta Sans", sans-serif;
+        background-color: #f7f3ec;
+        color: #23150e;
+      }
+
+      .font-editorial {
+        font-family: "Playfair Display", serif;
+      }
+
+      /* Subtle organic paper background noise */
+      .bg-paper {
+        background-color: #f7f3ec;
+        background-image:
+          radial-gradient(#23150e 0.5px, transparent 0.5px),
+          radial-gradient(#23150e 0.5px, #f7f3ec 0.5px);
+        background-size: 20px 20px;
+        background-position:
+          0 0,
+          10px 10px;
+        background-opacity: 0.03;
+      }
+
+      /* Organic card shadows */
+      .craft-shadow {
+        box-shadow: 6px 8px 0px 0px #23150e;
+      }
+
+      .craft-shadow-sm {
+        box-shadow: 3px 4px 0px 0px #23150e;
+      }
+
+      .craft-shadow-gold {
+        box-shadow: 6px 8px 0px 0px #f4be38;
+      }
+
+      .stamp-badge {
+        border: 2px dashed #23150e;
+      }
+
+      .tilt-left {
+        transform: rotate(-1.5deg);
+      }
+
+      .tilt-right {
+        transform: rotate(1.5deg);
+      }
+
+      .tilt-hover {
+        transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+      }
+      .tilt-hover:hover {
+        transform: translateY(-5px) rotate(0deg) scale(1.01);
+      }
+    </style>
+  </head>
+  <body
+    class="antialiased selection:bg-banana-400 selection:text-cacao-900 bg-paper"
+  >
+    <header
+      class="sticky top-0 z-40 bg-craft-light/90 backdrop-blur-md border-b-2 border-cacao-800 px-4 sm:px-8 py-4"
+    >
+      <div class="max-w-7xl mx-auto flex items-center justify-between">
+        <!-- Logo Brand -->
+        <a href="#" class="flex items-center gap-3 group">
+          <div
+            class="w-11 h-11 bg-cacao-800 text-banana-400 rounded-xl flex items-center justify-center font-editorial font-black text-xl craft-shadow-sm group-hover:bg-cacao-700 transition-all"
+          >
+            MB
+          </div>
+          <div class="flex flex-col">
+            <span
+              class="font-editorial font-extrabold text-xl leading-none text-cacao-900 tracking-tight"
+              >MELTED BANANA</span
+            >
+            <span
+              class="text-[10px] font-bold tracking-widest text-cacao-600 uppercase mt-0.5"
+              >Kripik Pisang Coklat Lumer</span
+            >
+          </div>
+        </a>
+
+        <!-- Navigation Links -->
+        <nav
+          class="hidden md:flex items-center gap-8 font-semibold text-sm text-cacao-800"
+        >
+          <a href="#cerita" class="hover:text-banana-600 transition-colors"
+            >Cerita Kami</a
+          >
+          <a href="#menu" class="hover:text-banana-600 transition-colors"
+            >Katalog Menu</a
+          >
+          <a href="#keunggulan" class="hover:text-banana-600 transition-colors"
+            >Kualitas</a
+          >
+          <a href="#testimoni" class="hover:text-banana-600 transition-colors"
+            >Ulasan Real</a
+          >
+        </nav>
+
+        <!-- Order Button -->
+        <button
+          onclick="openOrderModal()"
+          class="bg-banana-400 hover:bg-banana-500 text-cacao-900 px-5 py-2.5 rounded-xl font-bold text-sm border-2 border-cacao-900 craft-shadow-sm active:translate-x-0.5 active:translate-y-0.5 transition-all flex items-center gap-2"
+        >
+          <i class="fa-brands fa-whatsapp text-lg"></i>
+          <span class="hidden sm:inline">Pesan Sekarang</span>
+          <span class="sm:hidden">Pesan</span>
+        </button>
+      </div>
+    </header>
+
+    <section class="py-12 lg:py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+        <!-- Left Hero Text & Note -->
+        <div class="lg:col-span-7 space-y-6">
+          <h1
+            class="font-editorial text-4xl sm:text-6xl font-extrabold text-cacao-900 leading-[1.1] tracking-tight"
+          >
+            Kelezatan Pisang Matang Dipadu
+            <span
+              class="italic font-normal underline decoration-banana-400 decoration-4 underline-offset-4"
+              >Dark Chocolate</span
+            >
+            Lumer.
+          </h1>
+
+          <p
+            class="text-base sm:text-lg text-cacao-700 leading-relaxed max-w-2xl font-medium"
+          >
+            Kami memadukan pisang segar pilihan dengan lelehan racikan dark
+            chocolate pahit-manis melimpah. Bukan sekadar gorengan biasa, tapi
+            camilan pencuci mulut berkelas dengan standar kualitas tinggi.
+          </p>
+
+          <!-- Action Buttons -->
+          <div
+            class="pt-4 flex flex-col sm:flex-row items-stretch sm:items-center gap-4"
+          >
+            <a
+              href="#menu"
+              class="bg-cacao-800 hover:bg-cacao-900 text-banana-300 font-bold px-8 py-4 rounded-xl border-2 border-cacao-900 craft-shadow text-center transition-all flex items-center justify-center gap-3"
+            >
+              <span>Lihat Menu Pilihan</span>
+              <i class="fa-solid fa-arrow-down-long"></i>
+            </a>
+            <button
+              onclick="openOrderModal()"
+              class="bg-white hover:bg-craft-base text-cacao-900 font-bold px-8 py-4 rounded-xl border-2 border-cacao-900 craft-shadow text-center transition-all flex items-center justify-center gap-3"
+            >
+              <i class="fa-brands fa-whatsapp text-emerald-600 text-xl"></i>
+              <span>Pesan Langsung</span>
+            </button>
+            <button
+              onclick="orderShoppe()"
+              class="bg-white hover:bg-craft-base text-cacao-900 font-bold px-8 py-4 rounded-xl border-2 border-cacao-900 craft-shadow text-center transition-all flex items-center justify-center gap-3"
+            >
+              <svg
+                class="w-6 h-6 fill-[#ee4d2d]"
+                viewBox="0 0 24 24"
+                xmlns="http://w3.org"
+              >
+                <path
+                  d="M19.347 7.022l-1.92-4.14A1.332 1.332 0 0 0 16.223 2H7.776a1.332 1.332 0 0 0-1.204.882l-1.92 4.14A2.665 2.665 0 0 0 4 8.211V19a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3V8.21a2.664 2.664 0 0 0-.653-1.188zM12 4a2 2 0 0 1 2 2h-4a2 2 0 0 1 2-2zm3.333 13.333h-6.666a.667.667 0 0 1 0-1.333h6.666a.667.667 0 0 1 0 1.333zm1.334-3.333H7.333a.667.667 0 0 1 0-1.334h9.334a.667.667 0 0 1 0 1.334z"
+                />
+              </svg>
+
+              <span>Pesan Shoppe</span>
+            </button>
+          </div>
+
+          <!-- Handcrafted Sticky Note Stat Badge -->
+          <div
+            class="pt-8 grid grid-cols-3 gap-4 border-t-2 border-cacao-800/20"
+          >
+            <div>
+              <p class="font-editorial text-3xl font-extrabold text-cacao-900">
+                100%
+              </p>
+              <p class="text-xs font-semibold text-cacao-600 mt-1">
+                Dark Chocolate Asli
+              </p>
+            </div>
+            <div>
+              <p class="font-editorial text-3xl font-extrabold text-cacao-900">
+                Aman
+              </p>
+              <p class="text-xs font-semibold text-cacao-600 mt-1">
+                Tanpa Pemanis Buatan
+              </p>
+            </div>
+            <!-- <div>
+                            <p class="font-editorial text-3xl font-extrabold text-cacao-900">4.9/5</p>
+                            <p class="text-xs font-semibold text-cacao-600 mt-1">Rating dari 1,200+ Porsi</p>
+                        </div> -->
+          </div>
+        </div>
+
+        <!-- Right Visual Asymmetric Gallery Layout -->
+        <div class="lg:col-span-5 relative mt-6 lg:mt-0">
+          <div class="relative mx-auto max-w-md lg:max-w-none">
+            <!-- Main Hero Image Frame -->
+            <div
+              class="bg-white p-4 rounded-2xl border-2 border-cacao-900 craft-shadow tilt-right transition-transform hover:rotate-0"
+            >
+              <div
+                class="relative h-80 sm:h-96 rounded-xl overflow-hidden bg-cacao-900"
+              >
+                <img
+                  src="https://images.unsplash.com/photo-1571771894821-ce9b6c11b08e?auto=format&fit=crop&w=800&q=80"
+                  alt="Melted Banana Premium Visual"
+                  class="w-full h-full object-cover object-center"
+                  onerror="
+                    this.src =
+                      'https://placehold.co/800x800/23150e/fce48b?text=MELTED+BANANA'
+                  "
+                />
+                <div
+                  class="absolute inset-0 bg-gradient-to-t from-cacao-900/90 via-transparent to-transparent"
+                ></div>
+
+                <div class="absolute bottom-4 left-4 right-4 text-white">
+                  <p
+                    class="text-xs font-bold text-banana-400 uppercase tracking-widest"
+                  >
+                    Melted Banana
+                  </p>
+                  <h3
+                    class="font-editorial text-2xl font-bold text-white mt-0.5"
+                  >
+                    Original Dark Choco
+                  </h3>
+                </div>
+              </div>
+            </div>
+
+            <!-- Floating Paper Sticker Accent -->
+            <div
+              class="absolute -top-6 -left-6 bg-banana-300 text-cacao-900 p-4 rounded-xl border-2 border-cacao-900 craft-shadow-sm tilt-left hidden sm:block"
+            >
+              <p
+                class="font-editorial text-xs font-bold uppercase tracking-widest"
+              >
+                Resep Khas
+              </p>
+              <p class="text-sm font-extrabold mt-0.5">Tanpa Pemanis Buatan!</p>
+            </div>
+
+            <!-- Floating Stamp Badge -->
+            <div
+              class="absolute -bottom-6 -right-4 bg-white text-cacao-900 p-3.5 rounded-full border-2 border-cacao-900 craft-shadow-sm flex items-center justify-center w-28 h-28 text-center tilt-right"
+            >
+              <div>
+                <i class="fa-solid fa-fire text-amber-600 text-lg"></i>
+                <p
+                  class="font-editorial text-xs font-black uppercase leading-tight mt-1"
+                >
+                  Super Lumer!
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section
+      id="cerita"
+      class="py-16 bg-cacao-800 text-craft-light border-y-2 border-cacao-900"
+    >
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+          <div class="lg:col-span-5 space-y-4">
+            <div
+              class="bg-cacao-900 p-3 rounded-2xl border-2 border-banana-400 craft-shadow-gold tilt-left"
+            >
+              <img
+                src="assets/img/antar.jpeg"
+                alt="Dark Chocolate Melt Process"
+                class="rounded-xl w-full h-72 object-cover"
+              />
+            </div>
+          </div>
+
+          <div class="lg:col-span-7 space-y-6">
+            <span
+              class="text-xs font-bold uppercase tracking-widest text-banana-400 bg-cacao-900 px-3 py-1.5 rounded-md border border-banana-400/40"
+            >
+              Cerita & Dedikasi Rasa
+            </span>
+
+            <h2
+              class="font-editorial text-3xl sm:text-4xl font-extrabold text-white leading-tight"
+            >
+              Mengapa Begitu Obsesif Terhadap Tekstur Cokelat dan Pisang Matang?
+            </h2>
+
+            <p class="text-craft-base text-base leading-relaxed font-normal">
+              Banyak camilan pisang cokelat di pasaran menggunakan cokelat cair
+              biasa yang terlalu manis dan membuat lekas enek. Di Melted Banana,
+              kami mengolah sendiri racikan dark chocolate pekat dengan derajat
+              kelelehan yang presisi.
+            </p>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-2">
+              <div
+                class="bg-cacao-900/60 p-4 rounded-xl border border-cacao-700"
+              >
+                <i class="fa-solid fa-leaf text-banana-400 text-xl mb-2"></i>
+                <h4 class="font-bold text-white text-sm">
+                  Pisang Gepuk Matang Alami
+                </h4>
+                <p class="text-xs text-craft-accent mt-1">
+                  Dipilih pada puncak kematangan alami agar manisnya pas dan
+                  teksturnya lembut.
+                </p>
+              </div>
+
+              <div
+                class="bg-cacao-900/60 p-4 rounded-xl border border-cacao-700"
+              >
+                <i
+                  class="fa-solid fa-mortar-pestle text-banana-400 text-xl mb-2"
+                ></i>
+                <h4 class="font-bold text-white text-sm">
+                  Bittersweet Balance
+                </h4>
+                <p class="text-xs text-craft-accent mt-1">
+                  Perpaduan pahit gurih yang menetralisir rasa manis berlebih.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="menu" class="py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+      <!-- Section Header -->
+      <div
+        class="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6 border-b-2 border-cacao-900 pb-6"
+      >
+        <div>
+          <span
+            class="text-xs font-bold text-cacao-600 uppercase tracking-widest bg-banana-300 px-3 py-1 rounded-md border border-cacao-900"
+            >Katalog Pilihan</span
+          >
+          <h2
+            class="font-editorial text-3xl sm:text-5xl font-extrabold text-cacao-900 mt-3"
+          >
+            Menu Spesial Melted Banana
+          </h2>
+        </div>
+        <p class="text-sm font-medium text-cacao-700 max-w-md">
+          Setiap porsi disajikan dengan siraman cokelat lumer hangat dan
+          berbagai kombinasi topping renyah.
+        </p>
+      </div>
+
+      <!-- Bento Grid Layout -->
+      <div class="grid grid-cols-1 md:grid-cols-12 gap-6">
+        <!-- MENU 1: HERO FEATURED CARD (Spans 8 columns on MD) -->
+        <div
+          class="md:col-span-8 bg-white rounded-2xl border-2 border-cacao-900 craft-shadow p-6 flex flex-col justify-between tilt-hover"
+        >
+          <div class="grid grid-cols-1 sm:grid-cols-12 gap-6 items-center">
+            <div
+              class="sm:col-span-6 relative h-64 sm:h-72 rounded-xl overflow-hidden bg-cacao-900"
+            >
+              <img
+                src="assets/img/melted banana.jpeg"
+                alt="Original Melted Dark Choco"
+                class="w-full h-full object-cover"
+              />
+              <span
+                class="absolute top-3 left-3 bg-banana-400 text-cacao-900 font-extrabold text-xs px-3 py-1 rounded-md border border-cacao-900"
+                >FAVORIT UTAMA</span
+              >
+            </div>
+
+            <div class="sm:col-span-6 space-y-3">
+              <div class="flex justify-between items-start">
+                <h3
+                  class="font-editorial text-2xl font-extrabold text-cacao-900"
+                >
+                  Original Melted Dark Choco
+                </h3>
+                <span
+                  class="font-extrabold text-lg text-cacao-900 bg-banana-100 border border-cacao-900 px-2.5 py-1 rounded-md"
+                  >Rp 10k</span
+                >
+              </div>
+              <p
+                class="text-xs sm:text-sm text-cacao-700 leading-relaxed font-medium"
+              >
+                Pisang goreng krispi dengan siraman *dark chocolate* lumer pekat
+                racikan rahasia kami, dilengkapi taburan kacang sangrai garing.
+              </p>
+              <ul class="text-xs font-semibold text-cacao-800 space-y-1 pt-1">
+                <li>
+                  <i class="fa-solid fa-check text-emerald-600 mr-1.5"></i>
+                  Tingkat Manis Pas & Bittersweet
+                </li>
+                <li>
+                  <i class="fa-solid fa-check text-emerald-600 mr-1.5"></i>
+                  Taburan butiran oreo
+                </li>
+              </ul>
+              <div class="pt-3">
+                <button
+                  onclick="
+                    selectMenuForOrder('Original Melted Dark Choco', 10000)
+                  "
+                  class="w-full bg-cacao-800 hover:bg-cacao-900 text-white font-bold py-3 rounded-xl border border-cacao-900 transition-colors flex items-center justify-center gap-2 text-sm"
+                >
+                  <i class="fa-solid fa-cart-plus"></i>
+                  <span>Pesan Menu Ini</span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!--         
+        <div
+          class="md:col-span-4 bg-banana-100 rounded-2xl border-2 border-cacao-900 craft-shadow p-6 flex flex-col justify-between tilt-hover"
+        >
+          <div>
+            <div
+              class="relative h-48 rounded-xl overflow-hidden bg-cacao-900 mb-4"
+            >
+              <img
+                src="https://images.unsplash.com/photo-1541781774459-bb2af2f05b55?auto=format&fit=crop&w=600&q=80"
+                alt="Double Choco & Cheese"
+                class="w-full h-full object-cover"
+              />
+              <span
+                class="absolute top-3 right-3 bg-white text-cacao-900 font-extrabold text-xs px-2.5 py-1 rounded-md border border-cacao-900"
+                >Rp 10k</span
+              >
+            </div>
+            <h3 class="font-editorial text-xl font-extrabold text-cacao-900">
+              Melted Strawberry
+            </h3>
+            <p class="text-xs text-cacao-700 mt-2 leading-relaxed">
+              Perpaduan lelehan strawberry pekat dilengkapi butiran oreo
+              berlimpah.
+            </p>
+          </div>
+          <div class="pt-4">
+            <button
+              onclick="selectMenuForOrder('Melted Strawberry', 10000)"
+              class="w-full bg-banana-400 hover:bg-banana-500 text-cacao-900 font-bold py-2.5 rounded-xl border border-cacao-900 transition-colors flex items-center justify-center gap-2 text-sm"
+            >
+              <i class="fa-solid fa-cart-plus"></i>
+              <span>Pesan Menu Ini</span>
+            </button>
+          </div>
+        </div>
+
+        
+        <div
+          class="md:col-span-4 bg-white rounded-2xl border-2 border-cacao-900 craft-shadow p-6 flex flex-col justify-between tilt-hover"
+        >
+          <div>
+            <div
+              class="relative h-48 rounded-xl overflow-hidden bg-cacao-900 mb-4"
+            >
+              <img
+                src="https://images.unsplash.com/photo-1587314168485-3236d6710814?auto=format&fit=crop&w=600&q=80"
+                alt="Matcha Choco Supreme"
+                class="w-full h-full object-cover"
+              />
+              <span
+                class="absolute top-3 right-3 bg-banana-100 text-cacao-900 font-extrabold text-xs px-2.5 py-1 rounded-md border border-cacao-900"
+                >Rp 10k</span
+              >
+            </div>
+            <h3 class="font-editorial text-xl font-extrabold text-cacao-900">
+              Melted Matcha
+            </h3>
+            <p class="text-xs text-cacao-700 mt-2 leading-relaxed">
+              Perpaduan pahit gurih yang menetralisir rasa greentea dan taburan
+              oreo berlimpah.
+            </p>
+          </div>
+          <div class="pt-4">
+            <button
+              onclick="selectMenuForOrder('Melted Matcha', 10000)"
+              class="w-full bg-cacao-800 hover:bg-cacao-900 text-white font-bold py-2.5 rounded-xl border border-cacao-900 transition-colors flex items-center justify-center gap-2 text-sm"
+            >
+              <i class="fa-solid fa-cart-plus"></i>
+              <span>Pesan Menu Ini</span>
+            </button>
+          </div>
+        </div>
+
+        
+        <div
+          class="md:col-span-4 bg-white rounded-2xl border-2 border-cacao-900 craft-shadow p-6 flex flex-col justify-between tilt-hover"
+        >
+          <div>
+            <div
+              class="relative h-48 rounded-xl overflow-hidden bg-cacao-900 mb-4"
+            >
+              <img
+                src="https://images.unsplash.com/photo-1579372786545-d24232daf58c?auto=format&fit=crop&w=600&q=80"
+                alt="Oreo Choco Blast"
+                class="w-full h-full object-cover"
+              />
+              <span
+                class="absolute top-3 right-3 bg-banana-100 text-cacao-900 font-extrabold text-xs px-2.5 py-1 rounded-md border border-cacao-900"
+                >Rp 10k</span
+              >
+            </div>
+            <h3 class="font-editorial text-xl font-extrabold text-cacao-900">
+              Melted Latte
+            </h3>
+            <p class="text-xs text-cacao-700 mt-2 leading-relaxed">
+              Perpaduan kopi dan susu yang lezat dengan taburan oreo berlimpah.
+            </p>
+          </div>
+          <div class="pt-4">
+            <button
+              onclick="selectMenuForOrder('Melted Latte', 10000)"
+              class="w-full bg-cacao-800 hover:bg-cacao-900 text-white font-bold py-2.5 rounded-xl border border-cacao-900 transition-colors flex items-center justify-center gap-2 text-sm"
+            >
+              <i class="fa-solid fa-cart-plus"></i>
+              <span>Pesan Menu Ini</span>
+            </button>
+          </div>
+        </div> -->
+
+        <!-- MENU 5: PARTY BOX BANNER (Spans 4 columns) -->
+        <div
+          class="md:col-span-4 bg-cacao-900 text-white rounded-2xl border-2 border-cacao-900 craft-shadow p-6 flex flex-col justify-between tilt-hover"
+        >
+          <div>
+            <span
+              class="bg-red-600 text-white text-[10px] font-black px-2.5 py-1 rounded-md uppercase tracking-wider"
+              >COOMING SOON</span
+            >
+            <h3
+              class="font-editorial text-2xl font-extrabold text-banana-300 mt-3"
+            >
+              Party Box (Mix 3 Varian)
+            </h3>
+            <p class="text-xs text-craft-base mt-2 leading-relaxed">
+              Cocok untuk kumpul teman atau keluarga. Bebas pilih 3 varian rasa
+              favorit dalam 1 box besar hemat!
+            </p>
+            <div
+              class="my-4 p-3 rounded-lg bg-cacao-800 border border-cacao-700"
+            >
+              <p class="text-xs text-banana-400 font-bold">
+                Hemat hingga Rp 10.000!
+              </p>
+              <p class="text-xl font-extrabold text-white mt-0.5">Rp 50.000</p>
+            </div>
+          </div>
+          <button
+            onclick="selectMenuForOrder('Party Box (Mix 3 Varian)', 50000)"
+            class="w-full bg-banana-400 hover:bg-banana-500 text-cacao-900 font-bold py-3 rounded-xl border border-banana-400 transition-colors flex items-center justify-center gap-2 text-sm"
+          >
+            <i class="fa-solid fa-gift"></i>
+            <span>Pesan Party Box</span>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <section
+      id="keunggulan"
+      class="py-16 bg-craft-base border-y-2 border-cacao-900"
+    >
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center max-w-2xl mx-auto mb-12">
+          <h2 class="font-editorial text-3xl font-extrabold text-cacao-900">
+            Standar Kualitas Melted Banana
+          </h2>
+          <p class="text-sm font-medium text-cacao-700 mt-2">
+            Prinsip sederhana yang membuat rasa produk kami tetap konsisten.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <!-- Feature 1 -->
+          <div
+            class="bg-white p-6 rounded-2xl border-2 border-cacao-900 craft-shadow tilt-left"
+          >
+            <div
+              class="w-12 h-12 bg-banana-300 border border-cacao-900 rounded-xl flex items-center justify-center text-cacao-900 text-xl font-bold mb-4"
+            >
+              1
+            </div>
+            <h3 class="font-editorial text-xl font-bold text-cacao-900">
+              Selalu Fresh Digoreng
+            </h3>
+            <p class="text-xs text-cacao-700 mt-2 leading-relaxed font-medium">
+              Pisang hanya digoreng dan disiram cokelat setelah pesanan Anda
+              masuk untuk menjaga kehangatan dan krispi luar.
+            </p>
+          </div>
+
+          <!-- Feature 2 -->
+          <div
+            class="bg-white p-6 rounded-2xl border-2 border-cacao-900 craft-shadow"
+          >
+            <div
+              class="w-12 h-12 bg-banana-300 border border-cacao-900 rounded-xl flex items-center justify-center text-cacao-900 text-xl font-bold mb-4"
+            >
+              2
+            </div>
+            <h3 class="font-editorial text-xl font-bold text-cacao-900">
+              Bahan Terjamin Halal
+            </h3>
+            <p class="text-xs text-cacao-700 mt-2 leading-relaxed font-medium">
+              Seluruh bahan baku dari cokelat, minyak nabati, hingga topping
+              telah bersertifikat Halal & higienis.
+            </p>
+          </div>
+
+          <!-- Feature 3 -->
+          <div
+            class="bg-white p-6 rounded-2xl border-2 border-cacao-900 craft-shadow tilt-right"
+          >
+            <div
+              class="w-12 h-12 bg-banana-300 border border-cacao-900 rounded-xl flex items-center justify-center text-cacao-900 text-xl font-bold mb-4"
+            >
+              3
+            </div>
+            <h3 class="font-editorial text-xl font-bold text-cacao-900">
+              Kemasan Aman & Clean
+            </h3>
+            <p class="text-xs text-cacao-700 mt-2 leading-relaxed font-medium">
+              Box khusus food-grade anti bocor untuk menjaga lelehan cokelat
+              tidak tumpah selama perjalanan pengiriman.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section
+      id="testimoni"
+      class="py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto"
+    >
+      <div class="text-center max-w-2xl mx-auto mb-14">
+        <span
+          class="text-xs font-bold uppercase tracking-widest text-cacao-600 bg-banana-300 px-3 py-1 rounded-md border border-cacao-900"
+          >Ulasan Jujur</span
+        >
+        <h2
+          class="font-editorial text-3xl sm:text-4xl font-extrabold text-cacao-900 mt-2"
+        >
+          Kata Pelanggan Yang Sudah Mencoba
+        </h2>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <!-- Review Note 1 -->
+        <div
+          class="bg-white p-6 rounded-2xl border-2 border-cacao-900 craft-shadow tilt-left relative"
+        >
+          <!-- Pin Accent -->
+          <div
+            class="w-4 h-4 rounded-full bg-red-500 border border-cacao-900 absolute -top-2 left-1/2 -translate-x-1/2"
+          ></div>
+
+          <div class="flex text-amber-500 text-xs gap-1 mb-3">
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+          </div>
+          <p
+            class="text-xs sm:text-sm text-cacao-800 leading-relaxed italic font-medium"
+          >
+            "Best"
+          </p>
+          <div
+            class="mt-4 pt-3 border-t border-cacao-800/10 flex items-center justify-between"
+          >
+            <div>
+              <p class="font-bold text-xs text-cacao-900">Angel.</p>
+              <p class="text-[10px] text-cacao-600">
+                Mahasiswi Kampus Universitas Harkat Negeri
+              </p>
+            </div>
+            <span
+              class="text-[10px] font-bold bg-craft-base px-2 py-0.5 rounded border border-cacao-800"
+              >Tegal</span
+            >
+          </div>
+        </div>
+
+        <!-- Review Note 2 -->
+        <div
+          class="bg-banana-100 p-6 rounded-2xl border-2 border-cacao-900 craft-shadow tilt-right relative"
+        >
+          <!-- Pin Accent -->
+          <div
+            class="w-4 h-4 rounded-full bg-cacao-800 border border-cacao-900 absolute -top-2 left-1/2 -translate-x-1/2"
+          ></div>
+
+          <div class="flex text-amber-500 text-xs gap-1 mb-3">
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+          </div>
+          <p
+            class="text-xs sm:text-sm text-cacao-800 leading-relaxed italic font-medium"
+          >
+            "rasane enak"
+          </p>
+          <div
+            class="mt-4 pt-3 border-t border-cacao-800/10 flex items-center justify-between"
+          >
+            <div>
+              <p class="font-bold text-xs text-cacao-900">Dodi.</p>
+              <p class="text-[10px] text-cacao-600">
+                Mahasiswa universitas harkat negeri
+              </p>
+            </div>
+            <span
+              class="text-[10px] font-bold bg-white px-2 py-0.5 rounded border border-cacao-800"
+              >Tegal</span
+            >
+          </div>
+        </div>
+
+        <!-- Review Note 3 -->
+        <div
+          class="bg-white p-6 rounded-2xl border-2 border-cacao-900 craft-shadow tilt-left relative"
+        >
+          <!-- Pin Accent -->
+          <div
+            class="w-4 h-4 rounded-full bg-red-500 border border-cacao-900 absolute -top-2 left-1/2 -translate-x-1/2"
+          ></div>
+
+          <div class="flex text-amber-500 text-xs gap-1 mb-3">
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+          </div>
+          <p
+            class="text-xs sm:text-sm text-cacao-800 leading-relaxed italic font-medium"
+          >
+            "Enak matchanya kurang banyak aja isinya"
+          </p>
+          <div
+            class="mt-4 pt-3 border-t border-cacao-800/10 flex items-center justify-between"
+          >
+            <div>
+              <p class="font-bold text-xs text-cacao-900">Viky</p>
+              <p class="text-[10px] text-cacao-600">-</p>
+            </div>
+            <span
+              class="text-[10px] font-bold bg-craft-base px-2 py-0.5 rounded border border-cacao-800"
+              >Jakarta</span
+            >
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer
+      class="bg-cacao-900 text-craft-light pt-16 pb-12 border-t-2 border-cacao-900"
+    >
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div
+          class="grid grid-cols-1 md:grid-cols-12 gap-10 pb-12 border-b border-cacao-700"
+        >
+          <!-- Brand Info -->
+          <div class="md:col-span-6 space-y-4">
+            <div class="flex items-center gap-3">
+              <div
+                class="w-10 h-10 bg-banana-400 text-cacao-900 font-editorial font-extrabold text-xl rounded-xl flex items-center justify-center"
+              >
+                MB
+              </div>
+              <span class="font-editorial text-2xl font-extrabold text-white"
+                >MELTED BANANA</span
+              >
+            </div>
+            <p
+              class="text-craft-accent text-xs sm:text-sm leading-relaxed max-w-sm"
+            >
+              Pelopor camilan pisang goreng dark chocolate lumer dengan rasa
+              bittersweet autentik. Dibuat fresh setiap hari dengan bahan-bahan
+              kualitas terbaik.
+            </p>
+            <div class="flex items-center gap-3 pt-2">
+              <a
+                href="#"
+                class="w-9 h-9 rounded-lg bg-cacao-800 text-banana-400 border border-cacao-700 flex items-center justify-center hover:bg-banana-400 hover:text-cacao-900 transition-all"
+                ><i class="fa-brands fa-instagram"></i
+              ></a>
+              <a
+                href="#"
+                class="w-9 h-9 rounded-lg bg-cacao-800 text-banana-400 border border-cacao-700 flex items-center justify-center hover:bg-banana-400 hover:text-cacao-900 transition-all"
+                ><i class="fa-brands fa-tiktok"></i
+              ></a>
+              <a
+                href="#"
+                class="w-9 h-9 rounded-lg bg-cacao-800 text-banana-400 border border-cacao-700 flex items-center justify-center hover:bg-banana-400 hover:text-cacao-900 transition-all"
+                ><i class="fa-brands fa-whatsapp"></i
+              ></a>
+            </div>
+          </div>
+
+          <!-- Operating Hours & Outlet -->
+          <div class="md:col-span-6 space-y-3">
+            <h4 class="font-editorial text-lg font-bold text-white mb-2">
+              Outlet & Jam Operasional
+            </h4>
+            <div class="text-xs sm:text-sm text-craft-accent space-y-2">
+              <p class="flex items-center gap-2">
+                <i class="fa-regular fa-clock text-banana-400"></i>
+                <span>Buka Setiap Hari: 10.00 - 21.30 WIB</span>
+              </p>
+              <p class="flex items-start gap-2">
+                <i class="fa-solid fa-location-dot text-banana-400 mt-1"></i>
+                <span
+                  >Outlet Utama: Jl. Kuliner Nusantara No. 12, Area Food Court,
+                  Surabaya</span
+                >
+              </p>
+              <p class="flex items-center gap-2 pt-1">
+                <i class="fa-solid fa-phone text-banana-400"></i>
+                <span>+62 895-3842-23639</span>
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="pt-8 text-center text-[11px] text-craft-dark">
+          <p>&copy; 2026 MELTED BANANA. Fathur Rizqi Putra Pratama.</p>
+        </div>
+      </div>
+    </footer>
+
+    <div
+      id="orderModal"
+      class="fixed inset-0 z-50 hidden overflow-y-auto bg-cacao-900/80 backdrop-blur-sm flex items-center justify-center p-4"
+    >
+      <div
+        class="bg-craft-light rounded-2xl max-w-lg w-full p-6 sm:p-8 relative border-2 border-cacao-900 craft-shadow transform transition-all"
+      >
+        <!-- Close Modal Button -->
+        <button
+          onclick="closeOrderModal()"
+          class="absolute top-4 right-4 w-8 h-8 rounded-xl bg-cacao-800 text-white flex items-center justify-center hover:bg-cacao-900 transition-colors"
+        >
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+
+        <div class="flex items-center gap-3 mb-6">
+          <div
+            class="w-10 h-10 rounded-xl bg-emerald-100 text-emerald-700 border border-cacao-900 flex items-center justify-center text-xl"
+          >
+            <i class="fa-brands fa-whatsapp"></i>
+          </div>
+          <div>
+            <h3 class="font-editorial text-xl font-extrabold text-cacao-900">
+              Form Pesanan Cepat
+            </h3>
+            <p class="text-xs text-cacao-600 font-medium">
+              Terhubung langsung ke WhatsApp Outlet
+            </p>
+          </div>
+        </div>
+
+        <form
+          id="whatsappForm"
+          onsubmit="sendWhatsAppOrder(event)"
+          class="space-y-4"
+        >
+          <div>
+            <label
+              class="block text-xs font-bold text-cacao-900 uppercase tracking-wider mb-1"
+              >Nama Pemesan</label
+            >
+            <input
+              type="text"
+              id="custName"
+              required
+              placeholder="Contoh: Budi Santoso"
+              class="w-full px-4 py-3 rounded-xl border-2 border-cacao-900 focus:outline-none focus:bg-white text-sm font-medium"
+            />
+          </div>
+
+          <div>
+            <label
+              class="block text-xs font-bold text-cacao-900 uppercase tracking-wider mb-1"
+              >Pilih Menu Utama</label
+            >
+            <select
+              id="custMenu"
+              onchange="updatePriceCalculation()"
+              class="w-full px-4 py-3 rounded-xl border-2 border-cacao-900 focus:outline-none text-sm font-medium bg-white"
+            >
+              <option value="Original Melted Dark Choco" data-price="10000">
+                Original Melted Dark Choco (Rp 10.000)
+              </option>
+              <!-- <option value="Melted Matcha" data-price="10000">
+                Melted Matcha (Rp 10.000)
+              </option>
+              <option value="Melted Strawberry" data-price="10000">
+                Melted Strawberry (Rp 10.000)
+              </option>
+              <option value="Melted Latte" data-price="10000">
+                Melted Latte (Rp 10.000)
+              </option> -->
+              <option value="Party Box (Mix 3 Varian)" data-price="50000">
+                Party Box (Mix 3 Varian) (Rp 50.000)
+              </option>
+            </select>
+          </div>
+
+          <div class="grid grid-cols-2 gap-4">
+            <div>
+              <label
+                class="block text-xs font-bold text-cacao-900 uppercase tracking-wider mb-1"
+                >Jumlah Porsi</label
+              >
+              <div
+                class="flex items-center border-2 border-cacao-900 rounded-xl overflow-hidden bg-white"
+              >
+                <button
+                  type="button"
+                  onclick="adjustQty(-1)"
+                  class="px-3 py-2 bg-craft-base font-bold text-cacao-900 hover:bg-banana-300 transition-colors"
+                >
+                  -
+                </button>
+                <input
+                  type="number"
+                  id="custQty"
+                  value="1"
+                  min="1"
+                  readonly
+                  class="w-full text-center font-extrabold text-cacao-900 focus:outline-none text-sm"
+                />
+                <button
+                  type="button"
+                  onclick="adjustQty(1)"
+                  class="px-3 py-2 bg-craft-base font-bold text-cacao-900 hover:bg-banana-300 transition-colors"
+                >
+                  +
+                </button>
+              </div>
+            </div>
+            <div>
+              <label
+                class="block text-xs font-bold text-cacao-900 uppercase tracking-wider mb-1"
+                >Metode Ambil</label
+              >
+              <select
+                id="custDelivery"
+                class="w-full px-4 py-3 rounded-xl border-2 border-cacao-900 focus:outline-none text-sm font-medium bg-white"
+              >
+                <option value="Takeaway / Ambil Sendiri">
+                  Ambil di Outlet
+                </option>
+                <option value="Delivery Ojol (Gojek/Grab)">Kirim</option>
+              </select>
+            </div>
+          </div>
+
+          <div>
+            <label
+              class="block text-xs font-bold text-cacao-900 uppercase tracking-wider mb-1"
+              >Catatan Tambahan (Opsional)</label
+            >
+            <textarea
+              id="custNotes"
+              rows="2"
+              placeholder="Contoh: Cokelat dipisah, tidak pakai oreo, dll."
+              class="w-full px-4 py-3 rounded-xl border-2 border-cacao-900 focus:outline-none focus:bg-white text-sm font-medium"
+            ></textarea>
+          </div>
+
+          <!-- Total Summary Box -->
+          <div
+            class="bg-banana-300 p-4 rounded-xl border-2 border-cacao-900 flex justify-between items-center"
+          >
+            <span class="text-xs font-bold text-cacao-900 uppercase"
+              >Total Estimasi:</span
+            >
+            <span
+              id="totalPriceDisplay"
+              class="font-editorial text-2xl font-black text-cacao-900"
+              >Rp 10.000</span
+            >
+          </div>
+
+          <button
+            type="submit"
+            class="w-full bg-emerald-600 hover:bg-emerald-700 text-white font-bold py-3.5 rounded-xl border-2 border-cacao-900 craft-shadow transition-all flex items-center justify-center gap-2"
+          >
+            <i class="fa-brands fa-whatsapp text-lg"></i>
+            <span>Kirim Pesanan ke WhatsApp</span>
+          </button>
+        </form>
+      </div>
+    </div>
+
+    <script>
+      const orderModal = document.getElementById("orderModal");
+
+      function openOrderModal() {
+        orderModal.classList.remove("hidden");
+        updatePriceCalculation();
+      }
+
+      function orderShoppe() {
+        window.open(
+          "https://shopee.co.id/product/646511096/54968378757/",
+          "_blank",
+        );
+      }
+
+      function closeOrderModal() {
+        orderModal.classList.add("hidden");
+      }
+
+      // Close modal on backdrop click
+      orderModal.addEventListener("click", (e) => {
+        if (e.target === orderModal) {
+          closeOrderModal();
+        }
+      });
+
+      // Select specific menu item directly
+      function selectMenuForOrder(menuName, price) {
+        const selectElement = document.getElementById("custMenu");
+        for (let i = 0; i < selectElement.options.length; i++) {
+          if (selectElement.options[i].value === menuName) {
+            selectElement.selectedIndex = i;
+            break;
+          }
+        }
+        document.getElementById("custQty").value = 1;
+        openOrderModal();
+      }
+
+      // Quantity adjustment
+      function adjustQty(change) {
+        const qtyInput = document.getElementById("custQty");
+        let current = parseInt(qtyInput.value) || 1;
+        current += change;
+        if (current < 1) current = 1;
+        qtyInput.value = current;
+        updatePriceCalculation();
+      }
+
+      // Calculate dynamic total
+      function updatePriceCalculation() {
+        const selectElement = document.getElementById("custMenu");
+        const selectedOption =
+          selectElement.options[selectElement.selectedIndex];
+        const price = parseInt(selectedOption.getAttribute("data-price")) || 0;
+        const qty = parseInt(document.getElementById("custQty").value) || 1;
+
+        const total = price * qty;
+        document.getElementById("totalPriceDisplay").innerText =
+          `Rp ${total.toLocaleString("id-ID")}`;
+      }
+
+      // Generate WhatsApp Order Message
+      function sendWhatsAppOrder(event) {
+        event.preventDefault();
+
+        const name = document.getElementById("custName").value.trim();
+        const menu = document.getElementById("custMenu").value;
+        const qty = document.getElementById("custQty").value;
+        const delivery = document.getElementById("custDelivery").value;
+        const notes = document.getElementById("custNotes").value.trim();
+        const totalPrice =
+          document.getElementById("totalPriceDisplay").innerText;
+
+        const phoneNumber = "62895384223639"; // Nomor WA Toko
+
+        let message = `Halo Melted Banana, saya mau pesan:\n\n`;
+        message += `*Nama Pemesan:* ${name}\n`;
+        message += `*Menu:* ${menu}\n`;
+        message += `*Jumlah:* ${qty} Porsi\n`;
+        message += `*Metode:* ${delivery}\n`;
+        if (notes) {
+          message += `*Catatan:* ${notes}\n`;
+        }
+        message += `*Total Estimasi:* ${totalPrice}\n\n`;
+        message += `Mohon konfirmasi ketersediaan pesanan saya. Terima kasih!`;
+
+        const encodedMessage = encodeURIComponent(message);
+        window.open(
+          `https://wa.me/${phoneNumber}?text=${encodedMessage}`,
+          "_blank",
+        );
+        closeOrderModal();
+      }
+    </script>
+  </body>
+</html>
